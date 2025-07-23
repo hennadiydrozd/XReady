@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6401687E2E30CD1F00802E52 /* FlagsmithClient in Frameworks */ = {isa = PBXBuildFile; productRef = 6401687D2E30CD1F00802E52 /* FlagsmithClient */; };
 		CFE055982E25443F00AB55F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFE055892E25443F00AB55F7 /* Assets.xcassets */; };
 		CFE0559A2E25443F00AB55F7 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CFE0558B2E25443F00AB55F7 /* Inter-SemiBold.ttf */; };
 		CFE0559B2E25443F00AB55F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFE0558D2E25443F00AB55F7 /* LaunchScreen.storyboard */; };
@@ -109,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6401687E2E30CD1F00802E52 /* FlagsmithClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +307,7 @@
 			);
 			name = APP130D;
 			packageProductDependencies = (
+				6401687D2E30CD1F00802E52 /* FlagsmithClient */,
 			);
 			productName = APP130D;
 			productReference = CFE4520F2E1FF376007DC5CF /* APP130D.app */;
@@ -335,6 +338,9 @@
 			);
 			mainGroup = CFE452062E1FF375007DC5CF;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				6401687C2E30CD1F00802E52 /* XCRemoteSwiftPackageReference "flagsmith-ios-client" */,
+			);
 			productRefGroup = CFE452102E1FF376007DC5CF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -439,18 +445,19 @@
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = APP130D/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = XReady;
+				INFOPLIST_KEY_CFBundleDisplayName = "XReady for Match";
+				INFOPLIST_KEY_NSCameraUsageDescription = "The app needs access to your camera so you can save your results.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.stretchworkoutapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -474,18 +481,19 @@
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = APP130D/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = XReady;
+				INFOPLIST_KEY_CFBundleDisplayName = "XReady for Match";
+				INFOPLIST_KEY_NSCameraUsageDescription = "The app needs access to your camera so you can save your results.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.stretchworkoutapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -642,6 +650,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6401687C2E30CD1F00802E52 /* XCRemoteSwiftPackageReference "flagsmith-ios-client" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Flagsmith/flagsmith-ios-client.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.8.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6401687D2E30CD1F00802E52 /* FlagsmithClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6401687C2E30CD1F00802E52 /* XCRemoteSwiftPackageReference "flagsmith-ios-client" */;
+			productName = FlagsmithClient;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CFE452072E1FF375007DC5CF /* Project object */;
 }

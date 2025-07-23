@@ -9,14 +9,20 @@ struct AppRoot: View {
         ZStack {
             LinearGradient.main.ignoresSafeArea()
             
+            
+            
             rootView
                 .zIndex(1)
         }
         .dynamicTypeSize(.large)
-        .lockOrientation(AppDelegate.orientation)
         .environmentObject(statsManager)
         .animation(.default, value: isLoading)
         .animation(.default, value: showOnboarding)
+        .onAppear {
+            AppDelegate.orientationLock = .portrait
+            UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation")
+            UINavigationController.attemptRotationToDeviceOrientation()
+        }
     }
     
     @ViewBuilder
